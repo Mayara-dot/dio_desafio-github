@@ -1,0 +1,56 @@
+Git/GitHub
+
+
+dio_desafio-github Public
+Desafio de Projeto da plataforma Digital Innovation One - Guiado pelo Tech Lead Venilton Favo JR.
+
+_______--- Processo de commit ---_______
+
+#Todos os passos abaixo devem ser executados na pasta que sera utilizado para armazemanento do repositorio;
+
+#Se quiser criar o repositório via git Bash basta rodar o comando 'git init' na pasta escolhida
+
+* git clone <link do repositorio> 
+
+* git status #deve estar na branch main
+
+* git add . ou -A #informa ao git para adicionar para área de versionamento local, todos os arquivos modificados
+
+* git commit -m "mensagem/comentario do commit" #comita informações a serem enviadas para o repositorio
+
+* git push origin main #envia os documentos alterados para a plataforma do git
+
+
+
+_______--- Chave SHH ---_______
+
+**Não esqueça de gerar a chave SSH, caso ainda nao tenha
+
+Os passos são: 
+
+1 - Abrir o git Bash no desktop;
+
+ E gerar a chave no git Bash com o comando:
+ 
+	ssh-keygen -t ed25519 -C <e-mail>
+
+ Dar enter para confirmar o local onde armazenará a chave, adicionar uma senha(ou não), e enter até o final;
+
+
+2 - Acessar a pasta ~/.ssh e dar um cat na id_25519.pub e copiar e colar na área SSH and GPG keys, no GitHub. Não nesquela de colocar um nome para a chave **não esqueça que a gente sempre compartilha apenas a chave pública**;
+
+
+3 - Voltando para a pasta ~/.ssh , rode o comando:
+
+	eval $(ssh-agent -s)
+
+Irá gerar um pid
+
+4 - Digite o comando:
+ 
+	ssh-add id_ed25519(a chave privada)
+
+ E de um enter e passe a sua senha e enter;
+
+
+5 - Clone seu repositório utilzando a chave ssh
